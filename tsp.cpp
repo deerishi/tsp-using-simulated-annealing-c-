@@ -12,25 +12,16 @@ class TSP
     /*This Class defines the Basic functions for the TSP Problem, like taking the Input and calculating the distance matrix for the cities*/
     public:
     
-     char node[3];
      int points[40][2],numCities;
      //TSP(int i,int j) : x(i),y(j){}
      
      void inputData()
      {
-        
-        scanf("%d",&numCities);
-        int i=0;
-        int x,y;
+        std::cin >> numCities;
         getc_unlocked(stdin);
-        //double distance;
-        while(i<numCities)
-        {
-            scanf("%s%d%d ",node,&points[i][0],&points[i][1]);
-            //cities.push_back()
-            i++;
-        }
-        
+        for(int i=0; i<numCities; ++i){
+            std::cin >> points[i][0] >> points[i][1];
+        }        
      }
      
      int CalculateDistance(int x1,int y1,int x2,int y2)
